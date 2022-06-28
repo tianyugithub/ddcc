@@ -14,7 +14,9 @@ process=$4
 #change the system limit
 ulimit -n 999999
 
-echo $atk_cmd
+echo "命令：$atk_cmd"
+echo "线程：$4"
+# shellcheck disable=SC2004
 for ((i=1;i<=$process;i++))
 do
   $atk_cmd >/dev/null &
